@@ -36,6 +36,9 @@ jspm_packages/
 #private folder
 uploads/
 
+#mics
+.DS_Store
+
 # TypeScript cache
 *.tsbuildinfo
 
