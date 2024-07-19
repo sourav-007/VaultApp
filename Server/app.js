@@ -9,7 +9,7 @@ const uploadRoute = require('./routes/fileroutes.js');
 app.get('/', (req, res) => {
     res.send("This is home page");
 });
-
+app.use('/uploads', express.static('uploads'));  
 app.use('/home',uploadRoute);
 
 

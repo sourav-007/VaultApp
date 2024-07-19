@@ -4,8 +4,9 @@ class FileUpCon
 {
     static fileStore(req,res)
     {
+        const url = req.protocol + '://' + req.get('host')
         const f = new File({
-            fname : req.file.filename
+            fname : url + '/uploads/' + req.file.filename
         });
         f.save().then(result => {
             res.status(200).json({
@@ -26,7 +27,7 @@ class FileUpCon
      {
         File.find().then(data => {
             res.status(200).json({
-                message: "User list retrieved successfully!",
+                message: "File retrieved successfully!",
                 userfile: data
             });
         });
