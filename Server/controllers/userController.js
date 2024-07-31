@@ -36,10 +36,6 @@ const registerUser = asyncErrorHandler( async (req,res) => {
         throw new ApiError(400, "All fields are required")
     }
 
-    // if (!username || !email || !fullName || !password){
-    //     throw new ApiError(400, "All fields are required")
-    // }
-
     const existedUser =  await UserModel.findOne({
         $or : [{ username },{ email }]
     })

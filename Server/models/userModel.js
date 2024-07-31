@@ -25,11 +25,10 @@ const userSchema = mongoose.Schema(
         },
         password : {
             type : String,
-            required : true
-        },
-        // refreshToken: {
-        //     type: String
-        // }
+            required : true,
+            minlength: [6, 'Password must be at least 6 characters long'],
+            maxlength :[12, 'Password can be at most 12 characters long']
+        }
     },
     {
         timestamps: true
