@@ -10,7 +10,7 @@ const generateToken = async (userId) => {
         const user = await UserModel.findById(userId)
         const accessToken = user.generateAccessToken()
         //console.log("userId:", userId)
-        console.log("AT : ", accessToken);
+        //console.log("AT : ", accessToken);
 
         return {accessToken}
     
@@ -89,7 +89,7 @@ const loginUser = asyncErrorHandler( async (req, res) => {
     }
     
     const {accessToken} = await generateToken(user._id)
-    console.log("AT after :", accessToken)
+    //console.log("AT after :", accessToken)
 
     const options = {httpOnly:true, secure:true}
 
