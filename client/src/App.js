@@ -21,39 +21,10 @@ function App() {
 
       <Router>
         <Routes>
-          {/* {!isLoggedIn && (
-              <>
-                <Route path='/' element={<Register />}></Route>
-                <Route path='/register' element={<Register />}></Route>
-                <Route path='/login' element={<Login />}></Route>
-              </>
-            )}
-
-            {isLoggedIn ? (
-              role === 'admin' ? (
-
-                <Route element={<Layout />}>
-                  <Route path='/dashboard' element={<AdminDash />} />
-                </Route>
-  
-
-              ) : (
-
-                <Route element={<Layout />}>
-                  <Route path='/blogs' element={<BlogPost />} />
-                  <Route path='/blogs/:id' element={<BlogDetails />} />
-                </Route>
-
-
-              )
-            ) : (
-              <Route element={<Navigate to='/login' />}></Route>
-            )} */}
-
           <Route path='/' element={<Register />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/home' element={<Home/>} />
+          <Route path='/home' element={<Home />} />
         </Routes>
       </Router>
 

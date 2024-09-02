@@ -40,7 +40,7 @@ function Login() {
                 const { data } = response.data
                 const { accessToken, role } = data
 
-                console.log("ROLE", role)
+                //console.log("ROLE", role)
 
                 localStorage.setItem('Token', accessToken)
                 localStorage.setItem('Role', role)

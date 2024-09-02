@@ -70,7 +70,7 @@ function Register() {
                 fullName, username, email, password
             })
 
-            console.log(response);
+            //console.log(response);
 
             toast.success('Successfully registered!')
             if (response.status === 201) {
