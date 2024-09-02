@@ -35,9 +35,9 @@ function Home() {
         }
     }
   return (
-    <h1 onClick={handleLogout} className="text-3xl font-bold underline">
+    <button onClick={handleLogout} className="text-3xl font-bold underline">
       Logout
-    </h1>
+    </button>
   )
 }
 
