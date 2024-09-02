@@ -10,11 +10,6 @@ import Home from './component/Pages/Home'
 
 function App() {
 
-  // const isLoggedIn = localStorage.getItem('loggedIn')
-  // const role = localStorage.getItem('Role')
-
-
-
   return (
     <>
       <Toaster position='bottom-right' toastOptions={{ duration: 2500 }} />
