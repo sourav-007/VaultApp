@@ -4,6 +4,8 @@ const cookieParser = require("cookie-parser");
 const mongoose = require('mongoose')
 const GridFSBucket = require('mongodb').GridFSBucket;
 const methodOverride = require('method-override');
+const cors = require('cors')
+
 
 
 const app = express();
@@ -16,11 +18,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'));
 app.use(cookieParser())
-// const cors = require('cors')
-// app.use(cors({
-//     origin: process.env.CORS_ORIGIN,
-//     credentials: true
-// }))
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
 
 
 

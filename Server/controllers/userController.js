@@ -76,6 +76,10 @@ const loginUser = asyncErrorHandler( async (req, res) => {
         throw new ApiError(400, "Email is required")
     }
 
+    if(!password){
+        throw new ApiError(400, "Password is required")
+    }
+
     const user = await UserModel.findOne({email})
 
     if(!user){
